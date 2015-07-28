@@ -78,6 +78,7 @@ public class PageControl: UIControl {
             for (idx, indicator) in enumerate(indicatorsLayers) {
                 indicator.fillColor = colorForIndicatorAtIndex(UInt(idx)).CGColor
             }
+            placeAndPaintSelectionBar()
         }
     }
     
@@ -120,6 +121,10 @@ public class PageControl: UIControl {
     :returns: A size indicating the natural size for the receiving view based on its intrinsic properties.
     */
     public override func intrinsicContentSize() -> CGSize {
+        if numberOfPages == 0 {
+            return CGSizeZero
+        }
+        
         let width = indicatorSize.width * CGFloat(numberOfPages) + spacing * CGFloat(numberOfPages - 1)
         return CGSize (width: width, height: indicatorSize.height + 6)
     }
