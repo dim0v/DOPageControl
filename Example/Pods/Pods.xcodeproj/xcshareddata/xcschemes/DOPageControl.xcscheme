@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F0891146D5E1743E2850425C"
+               BlueprintIdentifier = "4F47EE47737D4131B8448238"
                BuildableName = "DOPageControl.framework"
                BlueprintName = "DOPageControl"
                ReferencedContainer = "container:Pods.xcodeproj">
