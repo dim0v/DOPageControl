@@ -1,0 +1,6 @@
+framework module DOPageControl {
+  umbrella header "DOPageControl-umbrella.h"
+
+  export *
+  module * { export * }
+}

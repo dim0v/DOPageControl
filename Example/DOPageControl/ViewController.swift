@@ -7,17 +7,24 @@
 //
 
 import UIKit
+import DOPageControl
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIScrollViewDelegate {
 
+    @IBOutlet weak var pageControl: PageControl!
+    
+    @IBAction func pageChanged(sender: PageControl) {
+        println("Page changed: \(sender.currentPage)")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        pageControl.colorMapping = [UIColor.redColor(), UIColor.greenColor(), UIColor.blueColor()];
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
+        pageControl.setCurrentPage(UInt(scrollView.contentOffset.x / scrollView.bounds.size.width), animated: true)
     }
 
 }

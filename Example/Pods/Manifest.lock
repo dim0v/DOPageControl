@@ -1,0 +1,14 @@
+PODS:
+  - DOPageControl (1.0.0)
+
+DEPENDENCIES:
+  - DOPageControl (from `../`)
+
+EXTERNAL SOURCES:
+  DOPageControl:
+    :path: ../
+
+SPEC CHECKSUMS:
+  DOPageControl: 597d3ff0659bfe18a216363d45690d5a8e300ab7
+
+COCOAPODS: 0.38.2

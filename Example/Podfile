@@ -4,9 +4,3 @@ use_frameworks!
 target 'DOPageControl_Example', :exclusive => true do
   pod "DOPageControl", :path => "../"
 end
-
-target 'DOPageControl_Tests', :exclusive => true do
-  pod "DOPageControl", :path => "../"
-
-  
-end

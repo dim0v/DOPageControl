@@ -1,0 +1,6 @@
+framework module Pods_DOPageControl_Example {
+  umbrella header "Pods-DOPageControl_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

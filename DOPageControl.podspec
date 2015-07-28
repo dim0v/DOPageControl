@@ -9,19 +9,19 @@
 
 Pod::Spec.new do |s|
   s.name             = "DOPageControl"
-  s.version          = "0.1.0"
+  s.version          = "1.0.0"
   s.summary          = "A short description of DOPageControl."
-  s.description      = <<-DESC
-                       An optional longer description of DOPageControl
-
-                       * Markdown format.
-                       * Don't worry about the indent, we strip it!
-                       DESC
-  s.homepage         = "https://github.com/<GITHUB_USERNAME>/DOPageControl"
-  # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
+#  s.description      = <<-DESC
+#                       An optional longer description of DOPageControl
+#
+#                       * Markdown format.
+#                       * Don't worry about the indent, we strip it!
+#                       DESC
+  s.homepage         = "https://github.com/dim0v/DOPageControl"
+  s.screenshots      = "https://raw.githubusercontent.com/dim0v/DOPageControl/master/Screenshots/Screenshot0.png"
   s.license          = 'MIT'
   s.author           = { "Dmytro Ovcharenko" => "dmyt.ov@gmail.com" }
-  s.source           = { :git => "https://github.com/<GITHUB_USERNAME>/DOPageControl.git", :tag => s.version.to_s }
+  s.source           = { :git => "https://github.com/dim0v/DOPageControl.git", :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.platform     = :ios, '8.0'
