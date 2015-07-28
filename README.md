@@ -17,7 +17,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 **OR**
 
-Simply run `pod try DOCheckboxControl`
+Simply run `pod try DOPageControl`
 
 ## Requirements
 

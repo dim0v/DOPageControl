@@ -10,13 +10,12 @@
 Pod::Spec.new do |s|
   s.name             = "DOPageControl"
   s.version          = "1.0.0"
-  s.summary          = "A short description of DOPageControl."
-#  s.description      = <<-DESC
-#                       An optional longer description of DOPageControl
-#
-#                       * Markdown format.
-#                       * Don't worry about the indent, we strip it!
-#                       DESC
+  s.summary          = "Replacement for UIPageControl. Written in Swift"
+  s.description      = <<-DESC
+                       Provides functionality similar to UIPageControl.
+                       Has slightly different visual appearence and allows to customize page indicators size, color and spacing
+
+                       DESC
   s.homepage         = "https://github.com/dim0v/DOPageControl"
   s.screenshots      = "https://raw.githubusercontent.com/dim0v/DOPageControl/master/Screenshots/Screenshot0.png"
   s.license          = 'MIT'
