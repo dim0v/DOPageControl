@@ -9,7 +9,7 @@
 import UIKit
 import DOPageControl
 
-class ViewController: UIViewController, UIScrollViewDelegate {
+class ViewController: UIViewController {
 
     @IBOutlet weak var pageControl: PageControl!
     
@@ -22,10 +22,5 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         
         pageControl.colorMapping = [UIColor.redColor(), UIColor.greenColor(), UIColor.blueColor()];
     }
-
-    func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
-        pageControl.setCurrentPage(UInt(scrollView.contentOffset.x / scrollView.bounds.size.width), animated: true)
-    }
-
 }
 

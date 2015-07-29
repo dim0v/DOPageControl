@@ -38,6 +38,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="pageChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="AGS-NY-kYW"/>
+                                    <outlet property="pairedScrollView" destination="fJi-WH-7lZ" id="IWH-gp-f1H"/>
                                 </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gpv-Lw-L77">
@@ -71,9 +72,6 @@
                                             <constraint firstAttribute="bottom" secondItem="90U-5d-Ale" secondAttribute="bottom" id="dv6-2b-a08"/>
                                             <constraint firstItem="c0X-dw-IEc" firstAttribute="top" secondItem="fJi-WH-7lZ" secondAttribute="top" id="yKB-HJ-OPP"/>
                                         </constraints>
-                                        <connections>
-                                            <outlet property="delegate" destination="vXZ-lx-hvc" id="gJS-nq-Cqp"/>
-                                        </connections>
                                     </scrollView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

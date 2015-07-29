@@ -10,14 +10,14 @@ import UIKit
 
 /// Provides functionality similar to UIPageControl. Has slightly different visual appearence and allows to customize page indicators size, color and spacing
 @IBDesignable
-public class PageControl: UIControl {
+public class PageControl: UIControl, UIScrollViewDelegate {
 
     /**
      The number of pages the receiver shows (as dots).
     
      The value of the property is the number of pages for the page control to show as dots. The default value is 0.
     */
-    @IBInspectable public var numberOfPages: UInt = 0 {
+    @IBInspectable public var numberOfPages: Int = 0 {
         didSet {
             indicatorsLayers = nil
             setNeedsLayout()
@@ -29,11 +29,15 @@ public class PageControl: UIControl {
     
     The property value is an integer specifying the current page shown minus one; thus a value of zero (the default) indicates the first page. A page control shows the current page as a dot with a bar below it. Values outside the possible range are pinned to either 0 or numberOfPages minus 1.
     */
-    @IBInspectable public var currentPage: UInt = 0 {
+    @IBInspectable public var currentPage: Int = 0 {
         didSet {
             placeAndPaintSelectionBar()
             
-            if currentPage != oldValue {
+            if currentPage >= numberOfPages {
+                currentPage = numberOfPages - 1
+            } else if currentPage < 0 {
+                currentPage = 0
+            } else if currentPage != oldValue {
                 sendActionsForControlEvents(UIControlEvents.ValueChanged)
             }
         }
@@ -76,9 +80,25 @@ public class PageControl: UIControl {
         }
         didSet {
             for (idx, indicator) in enumerate(indicatorsLayers) {
-                indicator.fillColor = colorForIndicatorAtIndex(UInt(idx)).CGColor
+                indicator.fillColor = colorForIndicatorAtIndex(idx).CGColor
             }
             placeAndPaintSelectionBar()
+        }
+    }
+    
+    /**
+    An instance of UIScrollView which contains actual pages represented by the receiver.
+    
+    If this is set than the control will change its state automaticaly during scrolling in that UIScrollView.
+    
+    :Note: Even though the control will automatically change its state with nice and smooth animations when this property is set, it stills user responsibility to set numberOfPages correctly for the control to work properly.
+    :Note: Only horizontally laid out pages are supported.
+    
+    :Warning: UIScrollView's delegate will be replaced by the receiving PageControl instance!
+    */
+    @IBOutlet public var pairedScrollView: UIScrollView? {
+        didSet {
+            pairedScrollView?.delegate = self
         }
     }
     
@@ -88,7 +108,7 @@ public class PageControl: UIControl {
     :param: currentPage new currentPage
     :param: animated    should animate
     */
-    public func setCurrentPage(currentPage:UInt, animated:Bool) {
+    public func setCurrentPage(currentPage:Int, animated:Bool) {
         CATransaction.begin()
         CATransaction.setAnimationDuration(CFTimeInterval(animated ? animationDuration : 0.0))
         
@@ -103,11 +123,9 @@ public class PageControl: UIControl {
     public override func layoutSubviews() {
         super.layoutSubviews()
         
-        let offset = CGPoint(x: (bounds.width - intrinsicContentSize().width) / 2, y: (bounds.height - intrinsicContentSize().height) / 2)
-        
         for (idx, indicator) in enumerate(indicatorsLayers) {
-            let x = offset.x + CGFloat(idx) * (indicatorSize.width + spacing) + indicatorSize.width / 2
-            let y = offset.y + indicatorSize.height / 2
+            let x = layoutOffset.x + CGFloat(idx) * (indicatorSize.width + spacing) + indicatorSize.width / 2
+            let y = layoutOffset.y + indicatorSize.height / 2
             indicator.position = CGPoint(x: x, y: y);
         }
         
@@ -129,14 +147,99 @@ public class PageControl: UIControl {
         return CGSize (width: width, height: indicatorSize.height + 6)
     }
     
-    private func placeAndPaintSelectionBar() {
-        selectionBarLayer.position.x = indicatorsLayers[Int(currentPage)].position.x
-        selectionBarLayer.position.y = indicatorsLayers[Int(currentPage)].position.y + indicatorSize.height / 2 + 5
-        
-        selectionBarLayer.fillColor = colorForIndicatorAtIndex(currentPage).CGColor
+    /**
+    Tells the delegate that the scroll view has ended decelerating the scrolling movement.
+    
+    :param: scrollView The scroll-view object that is decelerating the scrolling of the content view.
+    */
+    public func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
+        setCurrentPage(Int(scrollView.contentOffset.x / scrollView.bounds.size.width), animated: true)
     }
     
-    private func colorForIndicatorAtIndex(index:UInt) -> UIColor {
+    /**
+    Tells the delegate when the user scrolls the content view within the receiver.
+    
+    :param: scrollView The scroll-view object in which the scrolling occurred.
+    */
+    public func scrollViewDidScroll(scrollView: UIScrollView) {
+        let relativeOffset = scrollView.contentOffset.x / scrollView.bounds.size.width
+        
+        selectionBarLayer.position = selectionBarPositionForRelativeOffset(relativeOffset)
+        
+        selectionBarLayer.fillColor = selectionBarColorForRelativeOffset(relativeOffset).CGColor
+    }
+    
+    private var layoutOffset: CGPoint {
+        get {
+            return CGPoint(x: (bounds.width - intrinsicContentSize().width) / 2, y: (bounds.height - intrinsicContentSize().height) / 2)
+        }
+    }
+    
+    private func selectionBarPositionForRelativeOffset(offset: CGFloat) -> CGPoint {
+        let (intPart, fractPart) = modf(offset)
+        
+        if numberOfPages == 0 {
+            return layoutOffset
+        }
+        
+        let y = layoutOffset.y + indicatorSize.height + 5
+        
+        if Int(intPart) >= numberOfPages - 1 {
+            return CGPoint(x: indicatorsLayers[numberOfPages - 1].position.x, y: y)
+        }
+        if Int(intPart) < 0 {
+            return CGPoint(x: indicatorsLayers[0].position.x, y: y)
+        }
+        
+        let pos1 = indicatorsLayers[Int(intPart)].position.x
+        let pos2 = indicatorsLayers[Int(intPart + 1)].position.x
+        
+        let x = pos1 * (1 - fractPart) +
+                pos2 * fractPart
+        
+        return CGPoint(x: x, y: y)
+    }
+    
+    private func selectionBarColorForRelativeOffset(offset: CGFloat) -> UIColor {
+        let (intPart, fractPart) = modf(offset)
+        
+        if Int(intPart) >= numberOfPages - 1 {
+            return colorForIndicatorAtIndex(numberOfPages - 1)
+        }
+        
+        if Int(intPart) < 0 {
+            return colorForIndicatorAtIndex(0)
+        }
+        
+        let color1 = colorForIndicatorAtIndex(Int(intPart))
+        let color2 = colorForIndicatorAtIndex(Int(intPart + 1))
+        
+        var (r1, g1, b1, a1) = (CGFloat(), CGFloat(), CGFloat(), CGFloat())
+    
+        var (r2, g2, b2, a2) = (CGFloat(), CGFloat(), CGFloat(), CGFloat())
+        
+        color1.getRed(&r1, green: &g1, blue: &b1, alpha: &a1)
+        color2.getRed(&r2, green: &g2, blue: &b2, alpha: &a2)
+        
+        let resultingColor = UIColor(red:   r2 * fractPart +
+                                            r1 * (1 - fractPart),
+                                    green:  g2 * fractPart +
+                                            g1 * (1 - fractPart),
+                                    blue:   b2 * fractPart +
+                                            b1 * (1 - fractPart),
+                                    alpha:  a2 * fractPart +
+                                            a1 * (1 - fractPart))
+        
+        return resultingColor
+    }
+    
+    private func placeAndPaintSelectionBar() {
+        selectionBarLayer.position = selectionBarPositionForRelativeOffset(CGFloat(currentPage))
+        
+        selectionBarLayer.fillColor = selectionBarColorForRelativeOffset(CGFloat(currentPage)).CGColor
+    }
+    
+    private func colorForIndicatorAtIndex(index:Int) -> UIColor {
         if let colors = colorMapping {
             return colors[Int(index)]
         }
@@ -147,11 +250,14 @@ public class PageControl: UIControl {
         get {
             if _indicatorsLayers == nil {
                 var newLayers = [CAShapeLayer]()
-                for idx in 0 ... numberOfPages - 1 {
-                    let indicatorLayer = layerForIndicatorWithColor(colorForIndicatorAtIndex(idx))
-                    
-                    newLayers.append(indicatorLayer)
-                    self.layer.addSublayer(indicatorLayer)
+                
+                if numberOfPages > 0 {
+                    for idx in 0 ... numberOfPages - 1 {
+                        let indicatorLayer = layerForIndicatorWithColor(colorForIndicatorAtIndex(idx))
+                        
+                        newLayers.append(indicatorLayer)
+                        self.layer.addSublayer(indicatorLayer)
+                    }
                 }
                 
                 _indicatorsLayers = newLayers
