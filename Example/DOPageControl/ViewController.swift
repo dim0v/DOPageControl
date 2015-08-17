@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        pageControl.colorMapping = [UIColor.redColor(), UIColor.greenColor(), UIColor.blueColor()];
+        pageControl.colorMapping = [UIColor.redColor(), UIColor.greenColor(), UIColor.blueColor(), UIColor.redColor()];
     }
 }
 

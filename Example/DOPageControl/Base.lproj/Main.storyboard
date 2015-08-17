@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
@@ -24,7 +24,7 @@
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="numberOfPages">
-                                        <integer key="value" value="3"/>
+                                        <integer key="value" value="4"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="currentPage">
                                         <integer key="value" value="0"/>
@@ -59,33 +59,42 @@
                                                 <rect key="frame" x="1200" y="0.0" width="600" height="550"/>
                                                 <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ph1-An-BGQ" userLabel="Red again">
+                                                <rect key="frame" x="1800" y="0.0" width="600" height="550"/>
+                                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            </view>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="90U-5d-Ale" secondAttribute="trailing" id="0hX-Xp-ONp"/>
+                                            <constraint firstItem="ph1-An-BGQ" firstAttribute="leading" secondItem="90U-5d-Ale" secondAttribute="trailing" id="1Z6-xo-AlL"/>
                                             <constraint firstItem="90U-5d-Ale" firstAttribute="leading" secondItem="c0X-dw-IEc" secondAttribute="trailing" id="1kf-j1-Qss"/>
+                                            <constraint firstItem="ph1-An-BGQ" firstAttribute="top" secondItem="fJi-WH-7lZ" secondAttribute="top" id="5AM-Z1-3gm"/>
                                             <constraint firstItem="lxi-ZH-Uj3" firstAttribute="top" secondItem="fJi-WH-7lZ" secondAttribute="top" id="6oa-CR-Qsx"/>
+                                            <constraint firstItem="c0X-dw-IEc" firstAttribute="width" secondItem="lxi-ZH-Uj3" secondAttribute="width" id="9ci-lD-xUD"/>
                                             <constraint firstItem="lxi-ZH-Uj3" firstAttribute="leading" secondItem="fJi-WH-7lZ" secondAttribute="leading" id="CTk-A5-1sM"/>
+                                            <constraint firstAttribute="trailing" secondItem="ph1-An-BGQ" secondAttribute="trailing" id="Ew6-uI-0A7"/>
                                             <constraint firstItem="90U-5d-Ale" firstAttribute="top" secondItem="fJi-WH-7lZ" secondAttribute="top" id="GTb-E0-wtN"/>
                                             <constraint firstAttribute="bottom" secondItem="c0X-dw-IEc" secondAttribute="bottom" id="Lxg-u2-g6n"/>
                                             <constraint firstAttribute="bottom" secondItem="lxi-ZH-Uj3" secondAttribute="bottom" id="RYp-6r-kj0"/>
+                                            <constraint firstItem="ph1-An-BGQ" firstAttribute="height" secondItem="90U-5d-Ale" secondAttribute="height" id="Vr0-fD-m5F"/>
                                             <constraint firstItem="c0X-dw-IEc" firstAttribute="leading" secondItem="lxi-ZH-Uj3" secondAttribute="trailing" id="Zkm-QK-E89"/>
                                             <constraint firstAttribute="bottom" secondItem="90U-5d-Ale" secondAttribute="bottom" id="dv6-2b-a08"/>
+                                            <constraint firstItem="c0X-dw-IEc" firstAttribute="height" secondItem="lxi-ZH-Uj3" secondAttribute="height" id="gO7-NK-B20"/>
+                                            <constraint firstItem="c0X-dw-IEc" firstAttribute="height" secondItem="90U-5d-Ale" secondAttribute="height" id="qoo-pp-ack"/>
+                                            <constraint firstItem="c0X-dw-IEc" firstAttribute="width" secondItem="90U-5d-Ale" secondAttribute="width" id="rep-lJ-APD"/>
+                                            <constraint firstAttribute="bottom" secondItem="ph1-An-BGQ" secondAttribute="bottom" id="rk9-9u-Opq"/>
+                                            <constraint firstItem="ph1-An-BGQ" firstAttribute="width" secondItem="90U-5d-Ale" secondAttribute="width" id="u3a-0e-xKl"/>
                                             <constraint firstItem="c0X-dw-IEc" firstAttribute="top" secondItem="fJi-WH-7lZ" secondAttribute="top" id="yKB-HJ-OPP"/>
                                         </constraints>
                                     </scrollView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="90U-5d-Ale" firstAttribute="height" secondItem="gpv-Lw-L77" secondAttribute="height" id="4Ud-HL-qGe"/>
                                     <constraint firstItem="fJi-WH-7lZ" firstAttribute="leading" secondItem="gpv-Lw-L77" secondAttribute="leading" id="HOQ-LA-hLz"/>
-                                    <constraint firstItem="90U-5d-Ale" firstAttribute="width" secondItem="gpv-Lw-L77" secondAttribute="width" id="Opt-zF-Fky"/>
-                                    <constraint firstItem="c0X-dw-IEc" firstAttribute="width" secondItem="gpv-Lw-L77" secondAttribute="width" id="OsM-ba-Zdu"/>
                                     <constraint firstAttribute="width" secondItem="lxi-ZH-Uj3" secondAttribute="width" id="S4E-do-NZu"/>
                                     <constraint firstAttribute="height" secondItem="lxi-ZH-Uj3" secondAttribute="height" id="UZ4-Hf-qw3"/>
                                     <constraint firstItem="fJi-WH-7lZ" firstAttribute="top" secondItem="gpv-Lw-L77" secondAttribute="top" id="aOq-Ae-2Mb"/>
                                     <constraint firstAttribute="bottom" secondItem="fJi-WH-7lZ" secondAttribute="bottom" id="l5a-af-E1x"/>
                                     <constraint firstAttribute="trailing" secondItem="fJi-WH-7lZ" secondAttribute="trailing" id="lFt-T2-ALS"/>
-                                    <constraint firstItem="c0X-dw-IEc" firstAttribute="height" secondItem="gpv-Lw-L77" secondAttribute="height" id="qlv-7Y-Xj8"/>
                                 </constraints>
                             </view>
                         </subviews>
