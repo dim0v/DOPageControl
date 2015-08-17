@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "DOPageControl"
-  s.version          = "1.1.0"
+  s.version          = "1.2.0"
   s.summary          = "Replacement for UIPageControl. Written in Swift"
   s.description      = <<-DESC
                        Provides functionality similar to UIPageControl.
