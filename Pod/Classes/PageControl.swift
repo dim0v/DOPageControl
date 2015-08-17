@@ -200,6 +200,44 @@ public class PageControl: UIControl, UIScrollViewDelegate {
         return CGPoint(x: x, y: y)
     }
     
+    private func mixColors(colors:(UIColor, UIColor), proportionOfFirstColor:CGFloat) -> UIColor {
+        let proportions = (proportionOfFirstColor, 1 - proportionOfFirstColor)
+        
+        func mixScalarVals(vals:(CGFloat, CGFloat)) -> CGFloat {
+            return proportions.0 * vals.0 + proportions.1 * vals.1;
+        }
+        
+        func mixHueVals(var vals:(CGFloat, CGFloat)) -> CGFloat {
+            let shouldChangeDirection = fabs(vals.0 - vals.1) > fabs(min(vals.0, vals.1) - max(vals.0, vals.1) + 1)
+            
+            if shouldChangeDirection {
+                if vals.0 < vals.1 {
+                    vals.0 += CGFloat(1)
+                } else {
+                    vals.1 += CGFloat(1)
+                }
+            }
+            
+            return fmod(proportions.0 * vals.0 + proportions.1 * vals.1, 1.0)
+        }
+        
+        var (h1, s1, b1, a1) = (CGFloat(), CGFloat(), CGFloat(), CGFloat())
+        
+        var (h2, s2, b2, a2) = (CGFloat(), CGFloat(), CGFloat(), CGFloat())
+        
+        colors.0.getHue(&h1, saturation: &s1, brightness: &b1, alpha: &a1)
+        colors.1.getHue(&h2, saturation: &s2, brightness: &b2, alpha: &a2)
+        
+        let resultingColor = UIColor(
+            hue:        mixHueVals((h1, h2)),
+            saturation: mixScalarVals((s1, s2)),
+            brightness: mixScalarVals((s1, s2)),
+            alpha:      mixScalarVals((a1, a2))
+        )
+        
+        return resultingColor
+    }
+    
     private func selectionBarColorForRelativeOffset(offset: CGFloat) -> UIColor {
         let (intPart, fractPart) = modf(offset)
         
@@ -214,23 +252,7 @@ public class PageControl: UIControl, UIScrollViewDelegate {
         let color1 = colorForIndicatorAtIndex(Int(intPart))
         let color2 = colorForIndicatorAtIndex(Int(intPart + 1))
         
-        var (r1, g1, b1, a1) = (CGFloat(), CGFloat(), CGFloat(), CGFloat())
-    
-        var (r2, g2, b2, a2) = (CGFloat(), CGFloat(), CGFloat(), CGFloat())
-        
-        color1.getRed(&r1, green: &g1, blue: &b1, alpha: &a1)
-        color2.getRed(&r2, green: &g2, blue: &b2, alpha: &a2)
-        
-        let resultingColor = UIColor(red:   r2 * fractPart +
-                                            r1 * (1 - fractPart),
-                                    green:  g2 * fractPart +
-                                            g1 * (1 - fractPart),
-                                    blue:   b2 * fractPart +
-                                            b1 * (1 - fractPart),
-                                    alpha:  a2 * fractPart +
-                                            a1 * (1 - fractPart))
-        
-        return resultingColor
+        return mixColors((color1, color2), proportionOfFirstColor: 1 - fractPart)
     }
     
     private func placeAndPaintSelectionBar() {
