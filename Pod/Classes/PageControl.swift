@@ -231,7 +231,7 @@ public class PageControl: UIControl, UIScrollViewDelegate {
         let resultingColor = UIColor(
             hue:        mixHueVals((h1, h2)),
             saturation: mixScalarVals((s1, s2)),
-            brightness: mixScalarVals((s1, s2)),
+            brightness: mixScalarVals((b1, b2)),
             alpha:      mixScalarVals((a1, a2))
         )
         

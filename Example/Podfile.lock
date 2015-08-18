@@ -1,5 +1,5 @@
 PODS:
-  - DOPageControl (1.2.0)
+  - DOPageControl (1.2.1)
 
 DEPENDENCIES:
   - DOPageControl (from `../`)
@@ -9,6 +9,6 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  DOPageControl: 5ccddf21cced0e313635a111cab111c92c8bfcd1
+  DOPageControl: cf19fccc34b3dbdbd57e51f24deab55d566d1d0a
 
 COCOAPODS: 0.38.2
