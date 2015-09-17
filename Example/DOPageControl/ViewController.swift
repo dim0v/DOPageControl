@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var pageControl: PageControl!
     
     @IBAction func pageChanged(sender: PageControl) {
-        println("Page changed: \(sender.currentPage)")
+        print("Page changed: \(sender.currentPage)")
     }
     
     override func viewDidLoad() {

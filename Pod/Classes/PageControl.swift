@@ -50,7 +50,7 @@ public class PageControl: UIControl, UIScrollViewDelegate {
     */
     @IBInspectable public var indicatorSize: CGSize = CGSize(width: 8, height: 8) {
         didSet {
-            for (idx, indicator) in enumerate(indicatorsLayers) {
+            for (_, indicator) in indicatorsLayers.enumerate() {
                 updateSizeForIndicatorLayer(indicator)
             }
             updateSelectionBarSize()
@@ -79,7 +79,7 @@ public class PageControl: UIControl, UIScrollViewDelegate {
             }
         }
         didSet {
-            for (idx, indicator) in enumerate(indicatorsLayers) {
+            for (idx, indicator) in indicatorsLayers.enumerate() {
                 indicator.fillColor = colorForIndicatorAtIndex(idx).CGColor
             }
             placeAndPaintSelectionBar()
@@ -105,8 +105,8 @@ public class PageControl: UIControl, UIScrollViewDelegate {
     /**
     Sets currentPage property with optional animation
     
-    :param: currentPage new currentPage
-    :param: animated    should animate
+    - parameter currentPage: new currentPage
+    - parameter animated:    should animate
     */
     public func setCurrentPage(currentPage:Int, animated:Bool) {
         CATransaction.begin()
@@ -123,7 +123,7 @@ public class PageControl: UIControl, UIScrollViewDelegate {
     public override func layoutSubviews() {
         super.layoutSubviews()
         
-        for (idx, indicator) in enumerate(indicatorsLayers) {
+        for (idx, indicator) in indicatorsLayers.enumerate() {
             let x = layoutOffset.x + CGFloat(idx) * (indicatorSize.width + spacing) + indicatorSize.width / 2
             let y = layoutOffset.y + indicatorSize.height / 2
             indicator.position = CGPoint(x: x, y: y);
@@ -136,7 +136,7 @@ public class PageControl: UIControl, UIScrollViewDelegate {
     /**
     Returns the natural size for the receiving view, considering only properties of the view itself.
     
-    :returns: A size indicating the natural size for the receiving view based on its intrinsic properties.
+    - returns: A size indicating the natural size for the receiving view based on its intrinsic properties.
     */
     public override func intrinsicContentSize() -> CGSize {
         if numberOfPages == 0 {
@@ -150,7 +150,7 @@ public class PageControl: UIControl, UIScrollViewDelegate {
     /**
     Tells the delegate that the scroll view has ended decelerating the scrolling movement.
     
-    :param: scrollView The scroll-view object that is decelerating the scrolling of the content view.
+    - parameter scrollView: The scroll-view object that is decelerating the scrolling of the content view.
     */
     public func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
         setCurrentPage(Int(scrollView.contentOffset.x / scrollView.bounds.size.width), animated: true)
@@ -159,14 +159,15 @@ public class PageControl: UIControl, UIScrollViewDelegate {
     /**
     Tells the delegate when the user scrolls the content view within the receiver.
     
-    :param: scrollView The scroll-view object in which the scrolling occurred.
+    - parameter scrollView: The scroll-view object in which the scrolling occurred.
     */
     public func scrollViewDidScroll(scrollView: UIScrollView) {
         let relativeOffset = scrollView.contentOffset.x / scrollView.bounds.size.width
         
         selectionBarLayer.position = selectionBarPositionForRelativeOffset(relativeOffset)
-        
         selectionBarLayer.fillColor = selectionBarColorForRelativeOffset(relativeOffset).CGColor
+        
+        selectionBarLayer.removeAllAnimations() //preventing ease in/out when animating changes
     }
     
     private var layoutOffset: CGPoint {
@@ -322,7 +323,7 @@ public class PageControl: UIControl, UIScrollViewDelegate {
                 
                 updateSelectionBarSize()
                 
-                self.layer.addSublayer(_selectionBarLayer)
+                self.layer.addSublayer(_selectionBarLayer!)
             }
             return _selectionBarLayer
         }
