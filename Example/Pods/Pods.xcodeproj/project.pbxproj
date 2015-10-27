@@ -7,106 +7,109 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0B9D7A8BC46B6F96E6D3B1BCF14F98D9 /* PageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F5DFF53CD9243F0CDCCDA34206382A /* PageControl.swift */; };
-		3B611DDD704140308A7F438076D45678 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECD48DF44542458D2E8C09C778A41758 /* Foundation.framework */; };
-		4821958AEA96B9C7AD2309434EE88EAA /* DOPageControl.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 37672952B40B5D44CAD37CE2BAE1140A /* DOPageControl.bundle */; };
-		6F5F2BB2D87C862ABB7FE783B49E1C50 /* DOPageControl-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 66C7028B5E43FC2AEC45826FD8537202 /* DOPageControl-dummy.m */; };
-		87476BD5B09D3F603B6EE2D7367D03D6 /* Pods-DOPageControl_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 92DC358FD413C9B0B0AD35B5F83193A7 /* Pods-DOPageControl_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B60F1241F0C31DF73D7F40EEC2B47B8F /* Pods-DOPageControl_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BE874BC8D3696A1761B9A96D1ACC5BC3 /* Pods-DOPageControl_Example-dummy.m */; };
-		D971244FDF746E8EA551427A014905B8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECD48DF44542458D2E8C09C778A41758 /* Foundation.framework */; };
-		DBDB5C255C49C4B8D23A7076330A8978 /* DOPageControl-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D663543C06380D34570913575399BC3 /* DOPageControl-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		126D4027CE6C022E7CFAA50354DECE05 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		38EBD90AEE56D059E0B12838DBCED827 /* DOPageControl.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 09D0FEBA7F27F9BC1AF22FBDEBF7D295 /* DOPageControl.bundle */; };
+		410D9CBCEC9ADA95989C2180D9C2A32B /* Pods-DOPageControl_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FA47CA6ACD778A63EAC733BC9946AA38 /* Pods-DOPageControl_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7E60F51CC3E0D739600966E408C6325A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		ACC47F4A47748CB243913852FB8A4853 /* DOPageControl-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C14471FC5E7EF9663FEB285B13B60E5 /* DOPageControl-dummy.m */; };
+		B7B3A00ADB4D3DB758E618EAA26B6D47 /* DOPageControl-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4CBDF5C98D4A1E51044AC2AEBDAECC /* DOPageControl-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C2ACD3E013ED5A9A0AD915F1D752C280 /* PageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB5A19844EF128F8FFBB73D63F35960 /* PageControl.swift */; };
+		D3301F367AE3FB877A123391C1D68207 /* Pods-DOPageControl_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 432642F8A9FF26CC51FDC4A3C58263B5 /* Pods-DOPageControl_Example-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		5EA4590F99EAECC1B45F22686B8F0F86 /* PBXContainerItemProxy */ = {
+		1953DC3FD53FABD213602CE61A0A330C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = FBBD2CFDED77076619E4AE064BBF61BB;
+			remoteGlobalIDString = C8D6B96C94E26323CEB14E6B5B5F38BF;
 			remoteInfo = "DOPageControl-DOPageControl";
 		};
-		EEB810669E2F4B80FDADE2901A5BECF0 /* PBXContainerItemProxy */ = {
+		2BA8A284A67F9D562A2E9570BC03CBA4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 2B74E3634D133325A055E0A1F65C0525;
+			remoteGlobalIDString = 48E57772A4BFA31363042426EE071819;
 			remoteInfo = DOPageControl;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		09D0FEBA7F27F9BC1AF22FBDEBF7D295 /* DOPageControl.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DOPageControl.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		0EC52162C5F067BBB783D7BF51401222 /* DOPageControl.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DOPageControl.xcconfig; sourceTree = "<group>"; };
 		1D2BBE20321714CD57274446E2154E81 /* Pods-DOPageControl_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DOPageControl_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		21F5DFF53CD9243F0CDCCDA34206382A /* PageControl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PageControl.swift; sourceTree = "<group>"; };
-		357E657A112971DFCE636B12DE0445AB /* Pods-DOPageControl_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DOPageControl_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		37672952B40B5D44CAD37CE2BAE1140A /* DOPageControl.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DOPageControl.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		3C8B8F318EA565C068F911B602C4E791 /* DOPageControl.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DOPageControl.xcconfig; sourceTree = "<group>"; };
+		1DB5A19844EF128F8FFBB73D63F35960 /* PageControl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PageControl.swift; sourceTree = "<group>"; };
+		3C5D73E24EE6F440D7C7B6D4E802F9AB /* Pods-DOPageControl_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DOPageControl_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		432642F8A9FF26CC51FDC4A3C58263B5 /* Pods-DOPageControl_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DOPageControl_Example-dummy.m"; sourceTree = "<group>"; };
 		4D600F3626E8C15D2396EB935CD58BC0 /* Pods-DOPageControl_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DOPageControl_Example-resources.sh"; sourceTree = "<group>"; };
+		53AFF147C205DA209515144B57479560 /* Pods-DOPageControl_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DOPageControl_Example.release.xcconfig"; sourceTree = "<group>"; };
 		564D38FA49FF7F955F2E2552268F3CA1 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		66C7028B5E43FC2AEC45826FD8537202 /* DOPageControl-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DOPageControl-dummy.m"; sourceTree = "<group>"; };
 		67386ED80DA56F5FA12DC52B716E7747 /* Pods-DOPageControl_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DOPageControl_Example-frameworks.sh"; sourceTree = "<group>"; };
-		8128FCEE489F9DF0CE14EB942445F576 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		86ACA2875C69292C230F6C147A0B7729 /* DOPageControl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DOPageControl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		898421883ABD77CAE04E79D159B9B7F2 /* DOPageControl-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "DOPageControl-Private.xcconfig"; sourceTree = "<group>"; };
-		8D663543C06380D34570913575399BC3 /* DOPageControl-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DOPageControl-umbrella.h"; sourceTree = "<group>"; };
-		9229BD903F2979C34E8C42DBA1E12C66 /* DOPageControl-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DOPageControl-prefix.pch"; sourceTree = "<group>"; };
-		92DC358FD413C9B0B0AD35B5F83193A7 /* Pods-DOPageControl_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DOPageControl_Example-umbrella.h"; sourceTree = "<group>"; };
+		7C14471FC5E7EF9663FEB285B13B60E5 /* DOPageControl-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DOPageControl-dummy.m"; sourceTree = "<group>"; };
+		91DC0942AEB6BF7BEA02863E10D8376D /* DOPageControl-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DOPageControl-prefix.pch"; sourceTree = "<group>"; };
 		9F8507BC5E259F28DAEDCD6B5D589BBF /* Pods-DOPageControl_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-DOPageControl_Example.modulemap"; sourceTree = "<group>"; };
-		B1AF66B38AAFA491360CEDAD2DF7351F /* Pods-DOPageControl_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DOPageControl_Example.release.xcconfig"; sourceTree = "<group>"; };
+		A8B8BD8B09F1BBE52671E1AB8D9BAB41 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ABEE02D85C9AE1F2E75D226BAD23C331 /* Pods_DOPageControl_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DOPageControl_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		BE874BC8D3696A1761B9A96D1ACC5BC3 /* Pods-DOPageControl_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DOPageControl_Example-dummy.m"; sourceTree = "<group>"; };
+		DD4CBDF5C98D4A1E51044AC2AEBDAECC /* DOPageControl-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DOPageControl-umbrella.h"; sourceTree = "<group>"; };
 		DE6282C1C37CC3FEE8EFFE42F32F50C4 /* Pods-DOPageControl_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DOPageControl_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		ECD48DF44542458D2E8C09C778A41758 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		F110C626CBD825B34ECC3A61C9B56A2A /* Pods_DOPageControl_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DOPageControl_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F5CD0E74CD195F4008A397BCEFBAEC9C /* DOPageControl.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = DOPageControl.modulemap; sourceTree = "<group>"; };
+		F9AE08F873353511630326845450F52F /* DOPageControl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DOPageControl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA47CA6ACD778A63EAC733BC9946AA38 /* Pods-DOPageControl_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DOPageControl_Example-umbrella.h"; sourceTree = "<group>"; };
+		FBA41C9780E22BD2BE22729E421BB21C /* DOPageControl.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = DOPageControl.modulemap; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		2BDE62B0F57FF48F5550F5E0B8D0DD66 /* Frameworks */ = {
+		39B48B414B7095AD1FF4D381CB4A1C42 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				126D4027CE6C022E7CFAA50354DECE05 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6C45914C7111FA8FF6C35930F25955B2 /* Frameworks */ = {
+		9116B105D8AFB153D0F358BDD3E68570 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D971244FDF746E8EA551427A014905B8 /* Foundation.framework in Frameworks */,
+				7E60F51CC3E0D739600966E408C6325A /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AA530F0E009B1B9537CCCEE6C4BD0FCA /* Frameworks */ = {
+		AEED0B174B6A730073FB3C73FB031C89 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B611DDD704140308A7F438076D45678 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		41DD8E82915A91D8FD7449A2915C0453 /* Pod */ = {
+		55038E543ABDC3F810FD216BF0D8656C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CF6EC7B9A9AE6DB46AA5E233A03433CA /* Classes */,
+				09D0FEBA7F27F9BC1AF22FBDEBF7D295 /* DOPageControl.bundle */,
+				F9AE08F873353511630326845450F52F /* DOPageControl.framework */,
+				ABEE02D85C9AE1F2E75D226BAD23C331 /* Pods_DOPageControl_Example.framework */,
 			);
-			path = Pod;
+			name = Products;
 			sourceTree = "<group>";
 		};
-		53F661C0CA7190D2CF05023FB33D61E4 /* iOS */ = {
+		72364ABB781D22D224D3AF85EC01D83B /* DOPageControl */ = {
 			isa = PBXGroup;
 			children = (
-				ECD48DF44542458D2E8C09C778A41758 /* Foundation.framework */,
+				AA5340360CEB0711B98447E97D124C9F /* Pod */,
+				A090FB008EC2DA52F7DB869FACA80DF6 /* Support Files */,
 			);
-			name = iOS;
+			name = DOPageControl;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		7A62BA6FE2114904F8DAC47A864D1F4F /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				D39045B389F73173E58AAF221215EF33 /* DOPageControl */,
+				72364ABB781D22D224D3AF85EC01D83B /* DOPageControl */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
@@ -117,9 +120,39 @@
 				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
 				7A62BA6FE2114904F8DAC47A864D1F4F /* Development Pods */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				CCA510CFBEA2D207524CDA0D73C3B561 /* Products */,
+				55038E543ABDC3F810FD216BF0D8656C /* Products */,
 				F77AAC98223C689CDDDE25CE3B0773DD /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		857D670283CA870757BB10B24ACCC6B2 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				1DB5A19844EF128F8FFBB73D63F35960 /* PageControl.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		A090FB008EC2DA52F7DB869FACA80DF6 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				FBA41C9780E22BD2BE22729E421BB21C /* DOPageControl.modulemap */,
+				0EC52162C5F067BBB783D7BF51401222 /* DOPageControl.xcconfig */,
+				7C14471FC5E7EF9663FEB285B13B60E5 /* DOPageControl-dummy.m */,
+				91DC0942AEB6BF7BEA02863E10D8376D /* DOPageControl-prefix.pch */,
+				DD4CBDF5C98D4A1E51044AC2AEBDAECC /* DOPageControl-umbrella.h */,
+				A8B8BD8B09F1BBE52671E1AB8D9BAB41 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/DOPageControl";
+			sourceTree = "<group>";
+		};
+		AA5340360CEB0711B98447E97D124C9F /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				857D670283CA870757BB10B24ACCC6B2 /* Classes */,
+			);
+			path = Pod;
 			sourceTree = "<group>";
 		};
 		AD3D6E5194CC7695D990C058F1076743 /* Pods-DOPageControl_Example */ = {
@@ -129,12 +162,12 @@
 				9F8507BC5E259F28DAEDCD6B5D589BBF /* Pods-DOPageControl_Example.modulemap */,
 				1D2BBE20321714CD57274446E2154E81 /* Pods-DOPageControl_Example-acknowledgements.markdown */,
 				DE6282C1C37CC3FEE8EFFE42F32F50C4 /* Pods-DOPageControl_Example-acknowledgements.plist */,
-				BE874BC8D3696A1761B9A96D1ACC5BC3 /* Pods-DOPageControl_Example-dummy.m */,
+				432642F8A9FF26CC51FDC4A3C58263B5 /* Pods-DOPageControl_Example-dummy.m */,
 				67386ED80DA56F5FA12DC52B716E7747 /* Pods-DOPageControl_Example-frameworks.sh */,
 				4D600F3626E8C15D2396EB935CD58BC0 /* Pods-DOPageControl_Example-resources.sh */,
-				92DC358FD413C9B0B0AD35B5F83193A7 /* Pods-DOPageControl_Example-umbrella.h */,
-				357E657A112971DFCE636B12DE0445AB /* Pods-DOPageControl_Example.debug.xcconfig */,
-				B1AF66B38AAFA491360CEDAD2DF7351F /* Pods-DOPageControl_Example.release.xcconfig */,
+				FA47CA6ACD778A63EAC733BC9946AA38 /* Pods-DOPageControl_Example-umbrella.h */,
+				3C5D73E24EE6F440D7C7B6D4E802F9AB /* Pods-DOPageControl_Example.debug.xcconfig */,
+				53AFF147C205DA209515144B57479560 /* Pods-DOPageControl_Example.release.xcconfig */,
 			);
 			name = "Pods-DOPageControl_Example";
 			path = "Target Support Files/Pods-DOPageControl_Example";
@@ -143,37 +176,17 @@
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				53F661C0CA7190D2CF05023FB33D61E4 /* iOS */,
+				BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		CCA510CFBEA2D207524CDA0D73C3B561 /* Products */ = {
+		BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				37672952B40B5D44CAD37CE2BAE1140A /* DOPageControl.bundle */,
-				86ACA2875C69292C230F6C147A0B7729 /* DOPageControl.framework */,
-				F110C626CBD825B34ECC3A61C9B56A2A /* Pods_DOPageControl_Example.framework */,
+				3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */,
 			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		CF6EC7B9A9AE6DB46AA5E233A03433CA /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				21F5DFF53CD9243F0CDCCDA34206382A /* PageControl.swift */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
-		D39045B389F73173E58AAF221215EF33 /* DOPageControl */ = {
-			isa = PBXGroup;
-			children = (
-				41DD8E82915A91D8FD7449A2915C0453 /* Pod */,
-				F8134CDA9D9AC4D808F084E8D1407B84 /* Support Files */,
-			);
-			name = DOPageControl;
-			path = ../..;
+			name = iOS;
 			sourceTree = "<group>";
 		};
 		F77AAC98223C689CDDDE25CE3B0773DD /* Targets Support Files */ = {
@@ -184,69 +197,72 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		F8134CDA9D9AC4D808F084E8D1407B84 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				F5CD0E74CD195F4008A397BCEFBAEC9C /* DOPageControl.modulemap */,
-				3C8B8F318EA565C068F911B602C4E791 /* DOPageControl.xcconfig */,
-				898421883ABD77CAE04E79D159B9B7F2 /* DOPageControl-Private.xcconfig */,
-				66C7028B5E43FC2AEC45826FD8537202 /* DOPageControl-dummy.m */,
-				9229BD903F2979C34E8C42DBA1E12C66 /* DOPageControl-prefix.pch */,
-				8D663543C06380D34570913575399BC3 /* DOPageControl-umbrella.h */,
-				8128FCEE489F9DF0CE14EB942445F576 /* Info.plist */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/DOPageControl";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		21C79CB0E370CFEDE97B2A6652A0EAC6 /* Headers */ = {
+		333BD833B35892C539D7BC7A03844EE4 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DBDB5C255C49C4B8D23A7076330A8978 /* DOPageControl-umbrella.h in Headers */,
+				410D9CBCEC9ADA95989C2180D9C2A32B /* Pods-DOPageControl_Example-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9E551F7981AA6B0B70F085F0038D3A19 /* Headers */ = {
+		B479BF98B53CB41E56D59472A89FC3B6 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				87476BD5B09D3F603B6EE2D7367D03D6 /* Pods-DOPageControl_Example-umbrella.h in Headers */,
+				B7B3A00ADB4D3DB758E618EAA26B6D47 /* DOPageControl-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		2B74E3634D133325A055E0A1F65C0525 /* DOPageControl */ = {
+		48E57772A4BFA31363042426EE071819 /* DOPageControl */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F59CE178DFDEE871E004A28ABBB45960 /* Build configuration list for PBXNativeTarget "DOPageControl" */;
+			buildConfigurationList = ED9F4D6DE2762ED9A3111CB2563EDBBB /* Build configuration list for PBXNativeTarget "DOPageControl" */;
 			buildPhases = (
-				59C71876B7FC82A9247B980067EC5916 /* Sources */,
-				6C45914C7111FA8FF6C35930F25955B2 /* Frameworks */,
-				DE3C268D14CDA0DBCC6818AD7CC79FEA /* Resources */,
-				21C79CB0E370CFEDE97B2A6652A0EAC6 /* Headers */,
+				172F67B2893F2F5583D391BC31A1F17F /* Sources */,
+				9116B105D8AFB153D0F358BDD3E68570 /* Frameworks */,
+				B1833B8D321180A203B23BE8BCA68037 /* Resources */,
+				B479BF98B53CB41E56D59472A89FC3B6 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				B76DD1CD2FFBFCB8E5916156A923E5E8 /* PBXTargetDependency */,
+				BB957B654E4DFF4510D75EADAC00BED8 /* PBXTargetDependency */,
 			);
 			name = DOPageControl;
 			productName = DOPageControl;
-			productReference = 86ACA2875C69292C230F6C147A0B7729 /* DOPageControl.framework */;
+			productReference = F9AE08F873353511630326845450F52F /* DOPageControl.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		FBBD2CFDED77076619E4AE064BBF61BB /* DOPageControl-DOPageControl */ = {
+		919D5DBD93C840CB8645A8E3F640C9DC /* Pods-DOPageControl_Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = ACD4A9BB6C19DD4AB131520EBD57F181 /* Build configuration list for PBXNativeTarget "DOPageControl-DOPageControl" */;
+			buildConfigurationList = 6DC46CFA445E26D8FF32D62E5E7EC038 /* Build configuration list for PBXNativeTarget "Pods-DOPageControl_Example" */;
 			buildPhases = (
-				5F5749EB8911C4190B2030002E14DF95 /* Sources */,
-				2BDE62B0F57FF48F5550F5E0B8D0DD66 /* Frameworks */,
-				D2CEB62717BE887A8490151D8D80DEF4 /* Resources */,
+				AB685D6CC231C45644AC466C1A2452BE /* Sources */,
+				39B48B414B7095AD1FF4D381CB4A1C42 /* Frameworks */,
+				333BD833B35892C539D7BC7A03844EE4 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				57ACA467AB73477E94958BABE3C665C7 /* PBXTargetDependency */,
+			);
+			name = "Pods-DOPageControl_Example";
+			productName = "Pods-DOPageControl_Example";
+			productReference = ABEE02D85C9AE1F2E75D226BAD23C331 /* Pods_DOPageControl_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C8D6B96C94E26323CEB14E6B5B5F38BF /* DOPageControl-DOPageControl */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6D7055C62668311E6103771468A4C319 /* Build configuration list for PBXNativeTarget "DOPageControl-DOPageControl" */;
+			buildPhases = (
+				B954A45D52B08856C4EFAF16772ED337 /* Sources */,
+				AEED0B174B6A730073FB3C73FB031C89 /* Frameworks */,
+				13B15F20063F09AB521B15F9D55D0EE7 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -254,26 +270,8 @@
 			);
 			name = "DOPageControl-DOPageControl";
 			productName = "DOPageControl-DOPageControl";
-			productReference = 37672952B40B5D44CAD37CE2BAE1140A /* DOPageControl.bundle */;
+			productReference = 09D0FEBA7F27F9BC1AF22FBDEBF7D295 /* DOPageControl.bundle */;
 			productType = "com.apple.product-type.bundle";
-		};
-		FF96175994B6FB8BDF9AAF0788B166C4 /* Pods-DOPageControl_Example */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 31C21169A99E78169852551E88363F83 /* Build configuration list for PBXNativeTarget "Pods-DOPageControl_Example" */;
-			buildPhases = (
-				98CF136491BB4B7C75B61F7BF24FDD81 /* Sources */,
-				AA530F0E009B1B9537CCCEE6C4BD0FCA /* Frameworks */,
-				9E551F7981AA6B0B70F085F0038D3A19 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				9DA530A2111AC80C3BAA21251AC7C6CA /* PBXTargetDependency */,
-			);
-			name = "Pods-DOPageControl_Example";
-			productName = "Pods-DOPageControl_Example";
-			productReference = F110C626CBD825B34ECC3A61C9B56A2A /* Pods_DOPageControl_Example.framework */;
-			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -292,90 +290,78 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = CCA510CFBEA2D207524CDA0D73C3B561 /* Products */;
+			productRefGroup = 55038E543ABDC3F810FD216BF0D8656C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2B74E3634D133325A055E0A1F65C0525 /* DOPageControl */,
-				FBBD2CFDED77076619E4AE064BBF61BB /* DOPageControl-DOPageControl */,
-				FF96175994B6FB8BDF9AAF0788B166C4 /* Pods-DOPageControl_Example */,
+				48E57772A4BFA31363042426EE071819 /* DOPageControl */,
+				C8D6B96C94E26323CEB14E6B5B5F38BF /* DOPageControl-DOPageControl */,
+				919D5DBD93C840CB8645A8E3F640C9DC /* Pods-DOPageControl_Example */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		D2CEB62717BE887A8490151D8D80DEF4 /* Resources */ = {
+		13B15F20063F09AB521B15F9D55D0EE7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DE3C268D14CDA0DBCC6818AD7CC79FEA /* Resources */ = {
+		B1833B8D321180A203B23BE8BCA68037 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4821958AEA96B9C7AD2309434EE88EAA /* DOPageControl.bundle in Resources */,
+				38EBD90AEE56D059E0B12838DBCED827 /* DOPageControl.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		59C71876B7FC82A9247B980067EC5916 /* Sources */ = {
+		172F67B2893F2F5583D391BC31A1F17F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6F5F2BB2D87C862ABB7FE783B49E1C50 /* DOPageControl-dummy.m in Sources */,
-				0B9D7A8BC46B6F96E6D3B1BCF14F98D9 /* PageControl.swift in Sources */,
+				ACC47F4A47748CB243913852FB8A4853 /* DOPageControl-dummy.m in Sources */,
+				C2ACD3E013ED5A9A0AD915F1D752C280 /* PageControl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5F5749EB8911C4190B2030002E14DF95 /* Sources */ = {
+		AB685D6CC231C45644AC466C1A2452BE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3301F367AE3FB877A123391C1D68207 /* Pods-DOPageControl_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		98CF136491BB4B7C75B61F7BF24FDD81 /* Sources */ = {
+		B954A45D52B08856C4EFAF16772ED337 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B60F1241F0C31DF73D7F40EEC2B47B8F /* Pods-DOPageControl_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		9DA530A2111AC80C3BAA21251AC7C6CA /* PBXTargetDependency */ = {
+		57ACA467AB73477E94958BABE3C665C7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = DOPageControl;
-			target = 2B74E3634D133325A055E0A1F65C0525 /* DOPageControl */;
-			targetProxy = EEB810669E2F4B80FDADE2901A5BECF0 /* PBXContainerItemProxy */;
+			target = 48E57772A4BFA31363042426EE071819 /* DOPageControl */;
+			targetProxy = 2BA8A284A67F9D562A2E9570BC03CBA4 /* PBXContainerItemProxy */;
 		};
-		B76DD1CD2FFBFCB8E5916156A923E5E8 /* PBXTargetDependency */ = {
+		BB957B654E4DFF4510D75EADAC00BED8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "DOPageControl-DOPageControl";
-			target = FBBD2CFDED77076619E4AE064BBF61BB /* DOPageControl-DOPageControl */;
-			targetProxy = 5EA4590F99EAECC1B45F22686B8F0F86 /* PBXContainerItemProxy */;
+			target = C8D6B96C94E26323CEB14E6B5B5F38BF /* DOPageControl-DOPageControl */;
+			targetProxy = 1953DC3FD53FABD213602CE61A0A330C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		10BB25E60B3F4F42E9FD57C7945B542A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 898421883ABD77CAE04E79D159B9B7F2 /* DOPageControl-Private.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				PRODUCT_NAME = DOPageControl;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Debug;
-		};
 		10DE1947DAC0ED28F6C0A9F9BD75D546 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -410,9 +396,21 @@
 			};
 			name = Release;
 		};
-		501BBFF58A9E4282FF03460B938D8ADC /* Release */ = {
+		33753EAB7B5B07D2902A743F9863E273 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B1AF66B38AAFA491360CEDAD2DF7351F /* Pods-DOPageControl_Example.release.xcconfig */;
+			baseConfigurationReference = 0EC52162C5F067BBB783D7BF51401222 /* DOPageControl.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = DOPageControl;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		545DF870D7DCABE7D3C3FECB40C00E20 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 53AFF147C205DA209515144B57479560 /* Pods-DOPageControl_Example.release.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -425,6 +423,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-DOPageControl_Example/Pods-DOPageControl_Example.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
@@ -478,15 +477,15 @@
 			};
 			name = Debug;
 		};
-		7200BBB2A1FF78BF3FCDCDAF60FD9E4D /* Debug */ = {
+		5F2F355DAAC2A22A0690A0CE643D6509 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 898421883ABD77CAE04E79D159B9B7F2 /* DOPageControl-Private.xcconfig */;
+			baseConfigurationReference = 0EC52162C5F067BBB783D7BF51401222 /* DOPageControl.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1.3.0;
+				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
+				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/DOPageControl/DOPageControl-prefix.pch";
@@ -506,15 +505,46 @@
 			};
 			name = Debug;
 		};
-		7C380AE08211678E37361F80F759B236 /* Release */ = {
+		86FB616E5AE7F83E7D9A97C362647117 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 898421883ABD77CAE04E79D159B9B7F2 /* DOPageControl-Private.xcconfig */;
+			baseConfigurationReference = 3C5D73E24EE6F440D7C7B6D4E802F9AB /* Pods-DOPageControl_Example.debug.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1.3.0;
+				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-DOPageControl_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-DOPageControl_Example/Pods-DOPageControl_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_DOPageControl_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8E162320DBEBAE03F36CD71A042FEA94 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0EC52162C5F067BBB783D7BF51401222 /* DOPageControl.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/DOPageControl/DOPageControl-prefix.pch";
@@ -533,39 +563,9 @@
 			};
 			name = Release;
 		};
-		B3AED079278FD7A6686426300D2CA9C5 /* Debug */ = {
+		E930B15B9E5FE7751BE287359A55E383 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 357E657A112971DFCE636B12DE0445AB /* Pods-DOPageControl_Example.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-DOPageControl_Example/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods-DOPageControl_Example/Pods-DOPageControl_Example.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods_DOPageControl_Example;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		F885663945C7D5D8589D5298D52A6CFD /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 898421883ABD77CAE04E79D159B9B7F2 /* DOPageControl-Private.xcconfig */;
+			baseConfigurationReference = 0EC52162C5F067BBB783D7BF51401222 /* DOPageControl.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				PRODUCT_NAME = DOPageControl;
@@ -587,29 +587,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		31C21169A99E78169852551E88363F83 /* Build configuration list for PBXNativeTarget "Pods-DOPageControl_Example" */ = {
+		6D7055C62668311E6103771468A4C319 /* Build configuration list for PBXNativeTarget "DOPageControl-DOPageControl" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B3AED079278FD7A6686426300D2CA9C5 /* Debug */,
-				501BBFF58A9E4282FF03460B938D8ADC /* Release */,
+				33753EAB7B5B07D2902A743F9863E273 /* Debug */,
+				E930B15B9E5FE7751BE287359A55E383 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		ACD4A9BB6C19DD4AB131520EBD57F181 /* Build configuration list for PBXNativeTarget "DOPageControl-DOPageControl" */ = {
+		6DC46CFA445E26D8FF32D62E5E7EC038 /* Build configuration list for PBXNativeTarget "Pods-DOPageControl_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				10BB25E60B3F4F42E9FD57C7945B542A /* Debug */,
-				F885663945C7D5D8589D5298D52A6CFD /* Release */,
+				86FB616E5AE7F83E7D9A97C362647117 /* Debug */,
+				545DF870D7DCABE7D3C3FECB40C00E20 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F59CE178DFDEE871E004A28ABBB45960 /* Build configuration list for PBXNativeTarget "DOPageControl" */ = {
+		ED9F4D6DE2762ED9A3111CB2563EDBBB /* Build configuration list for PBXNativeTarget "DOPageControl" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7200BBB2A1FF78BF3FCDCDAF60FD9E4D /* Debug */,
-				7C380AE08211678E37361F80F759B236 /* Release */,
+				5F2F355DAAC2A22A0690A0CE643D6509 /* Debug */,
+				8E162320DBEBAE03F36CD71A042FEA94 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
