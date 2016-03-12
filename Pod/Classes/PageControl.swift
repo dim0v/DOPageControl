@@ -162,7 +162,11 @@ public class PageControl: UIControl, UIScrollViewDelegate {
     - parameter scrollView: The scroll-view object in which the scrolling occurred.
     */
     public func scrollViewDidScroll(scrollView: UIScrollView) {
-        let relativeOffset = scrollView.contentOffset.x / scrollView.bounds.size.width
+        var relativeOffset = scrollView.contentOffset.x / scrollView.bounds.size.width
+        
+        if !isnormal(relativeOffset) {
+            relativeOffset = 0.0;
+        }
         
         selectionBarLayer.position = selectionBarPositionForRelativeOffset(relativeOffset)
         selectionBarLayer.fillColor = selectionBarColorForRelativeOffset(relativeOffset).CGColor
