@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "DOPageControl"
-  s.version          = "1.3.2"
+  s.version          = "1.3.3"
   s.summary          = "Replacement for UIPageControl. Written in Swift"
   s.description      = <<-DESC
                        Provides functionality similar to UIPageControl.
@@ -27,9 +27,6 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.source_files = 'Pod/Classes/**/*'
-  s.resource_bundles = {
-    'DOPageControl' => ['Pod/Assets/*.png']
-  }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'

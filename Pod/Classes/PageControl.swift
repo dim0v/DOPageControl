@@ -212,7 +212,9 @@ public class PageControl: UIControl, UIScrollViewDelegate {
             return proportions.0 * vals.0 + proportions.1 * vals.1;
         }
         
-        func mixHueVals(var vals:(CGFloat, CGFloat)) -> CGFloat {
+        func mixHueVals(inputVals:(CGFloat, CGFloat)) -> CGFloat {
+            var vals = inputVals;
+            
             let shouldChangeDirection = fabs(vals.0 - vals.1) > fabs(min(vals.0, vals.1) - max(vals.0, vals.1) + 1)
             
             if shouldChangeDirection {

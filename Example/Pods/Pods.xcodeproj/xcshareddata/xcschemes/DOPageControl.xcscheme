@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '48E57772A4BFA31363042426EE071819'
+               BlueprintIdentifier = '3C47A259005E49CBE36290DA94997016'
                BlueprintName = 'DOPageControl'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'DOPageControl.framework'>
