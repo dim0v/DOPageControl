@@ -13,14 +13,14 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var pageControl: PageControl!
     
-    @IBAction func pageChanged(sender: PageControl) {
+    @IBAction func pageChanged(_ sender: PageControl) {
         print("Page changed: \(sender.currentPage)")
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        pageControl.colorMapping = [UIColor.redColor(), UIColor.greenColor(), UIColor.blueColor(), UIColor.redColor()];
+        pageControl.colorMapping = [UIColor.red, UIColor.green, UIColor.blue, UIColor.red];
     }
 }
 
